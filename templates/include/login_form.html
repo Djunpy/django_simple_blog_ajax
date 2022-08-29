@@ -1,0 +1,43 @@
+<div class="form__login ">
+    {% include 'include/user_alert.html' %}
+    <span id="close-form__login" class="fas fa-times"></span>
+
+    <form action="" method="post" id="form__login">
+        {% csrf_token %}
+        <h3 class="form__login-title">Авторизация</h3>
+        <input
+                type="text"
+                placeholder="username"
+                name="login" id="id_login"
+                autocomplete="username"
+                class="form__login-input"
+        >
+
+        <input
+                type="password"
+                placeholder="password"
+                class="form__login-input"
+                name="password" required=""
+                id="id_password"
+                class="form__login-input"
+        >
+        <div class="form__login-check">
+            <span>Запомнить аккаунт</span>
+            <input type="checkbox" name="remember" id="id_remember">
+        </div>
+        <p class="form__login-text">
+            Забыли пароль? <a href="#">Восстановить!</a>
+        </p>
+
+        <input type="submit" value="Войти" class="btn btn-primary"/>
+{#        <p class="form__login-text">Авторизация с помощью</p>#}
+{#        <div class="form__buttons">#}
+{#            <a href="#" class="btn btn-primary"> google </a>#}
+{#            <a href="#" class="btn btn-primary"> facebook </a>#}
+{#        </div>#}
+        <p class="form__login-text">
+            Нет учетной записи? <a href="#" id="for-register">Регистрация</a>
+        </p>
+    </form>
+</div>
+

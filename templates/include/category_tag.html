@@ -1,0 +1,5 @@
+<ul class="header__navbar-dropdown-content">
+    {% for category in categories %}
+        <li><a href="" id="category-link" data-category-id="{{ category.id }}">{{ category.name }}</a></li>
+    {% endfor %}
+</ul>

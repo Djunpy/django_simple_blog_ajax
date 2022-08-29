@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load static %}
+{% block title %}{{ object.title }}{% endblock title %}
+{% block home %}
+<section class="post">
+    <div class="post__content post-container">
+        <a href="{% url 'main:home-page' %}" class="btn back-home">Вернуться на главную</a>
+        <h2 class="post-header__title">{{ object.title }}</h2>
+        <img src="{{ object.image.url }}" alt="" class="post__img">
+    </div>
+</section>
+{% endblock home %}
+{% block content %}
+<section class="post__content-down post-container">
+    <div>
+        {% for tag in object.tags.all %}
+            <a href="">#{{ tag }}</a>
+        {% endfor %}
+    </div>
+    <h2 class="post__subheader">{{ object.title }}</h2>
+    <p class="post__text">{{ object.description|safe }}</p>
+
+</section>
+<div class="share post-container">
+    <span class="share__title">Поделиться публикацией</span>
+    <div class="share__social">
+        <a href="" class="share__social-link"><i class='bx bxl-linkedin'></i></a>
+        <a href="" class="share__social-link"><i class='bx bxl-facebook'></i></a>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}<script src="{% static 'js/detail-scripts.js' %}"></script>{% endblock %}

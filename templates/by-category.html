@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load all_tags %}
+
+{% block title %}Главная страница{% endblock title %}
+
+
+
+
+{% block content %}
+
+    <section class="main container">
+        <div class="container">
+            <div class="main__post">
+{#                <div class="main__post-box">#}
+{#                    <img src="/img/post-1.jpg" alt="" class="main__post-img">#}
+{#                    <h2 class="main__post-category">Mobile</h2>#}
+{#                    <a href="" class="main__post-title">Title</a>#}
+{#                    <span class="main__post-date">12 feb 2022</span>#}
+{#                    <p class="main__post-description">#}
+{#                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eius, delectus, dolores harum ab#}
+{#                        non natus temporibus deleniti expedita molestiae autem veritatis alias. Fugit eligendi autem#}
+{#                        velit ad, officiis exercitationem.#}
+{#                    </p>#}
+{#                    <div class="main__post-author">#}
+{#                        <div class="main__post-author-group">#}
+{#                            <img src="/img/profile-1.jpg" alt="" class="main__author-img">#}
+{#                            <span class="post__author-name">NameTry</span>#}
+{#                        </div>#}
+{#                        <div class="main__post-author-eye"><span>23</span><span><i class='bx bxs-binoculars'></i></span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+
+{#                <button class="btn load-more" id="load-btn">Подписаться</button>#}
+            </div>
+
+
+            <div class="main__aside">
+                <h2 class="main__aside-title">Tags</h2>
+                {% show_tags %}
+{#                <div class="main__aside-tag">#}
+{#                    <button class="main___tag-hashtag">#mongodb</button>#}
+{#                    <button class="main___tag-hashtag">#nodejs</button>#}
+{#                    <button class="main___tag-hashtag">#a11y</button>#}
+{#                    <button class="main___tag-hashtag">#mobility</button>#}
+{#                    <button class="main___tag-hashtag">#inclusion</button>#}
+{#                    <button class="main___tag-hashtag">#webperf</button>#}
+{#                    <button class="main___tag-hashtag">#optimize</button>#}
+{#                    <button class="main___tag-hashtag">#performance</button>#}
+{#                </div>#}
+
+                <div class="main__newsletter">
+                    <h2 class="main__aside-title">Новостная рассылка</h2>
+                    <div class="main__aside-wrapp">
+                        <p>
+                            Вы можете подписаться, чтобы быть в курсе последних новостей!
+                        </p>
+                        <form action="#">
+                            <input type="email" name="email" placeholder="Email Address" required>
+
+                            <button type="submit" class="btn btn-primary" id="sub-btn">Подписаться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% load all_tags %}
+
+<header class="header">
+    <a href="{% url 'main:home-page' %}" class="header__logo">Djun<span>py</span></a>
+    <ul class="header__navbar">
+        <li><a href="{% url 'main:home-page' %}">Главная</a></li>
+        <li class="header__navbar-dropdown">
+            <a href="">Категории</a>
+                {% show_categories %}
+{#            <ul class="header__navbar-dropdown-content">#}
+{#                {% for category in categories %}#}
+{#                <li data-category-id="{{ category.id }}"><a href="">{{ category.name }}</a></li>#}
+{#                {% endfor %}#}
+{#            </ul>#}
+        </li>
+        <li><a href="">Подписаться</a></li>
+    </ul>
+
+    <div class="header__icons">
+        <i class="fa fa-bars" id="menu-btn"></i>
+        <i class="fa fa-search" id="search-btn"></i>
+        <i class="fa fa-user" id="login-btn"></i>
+    </div>
+
+
+    <form action="" class="header__search-form">
+        {% csrf_token %}
+        <input type="search" value="" id="id_search" placeholder="найти пост"/>
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</header>
